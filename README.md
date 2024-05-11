@@ -1,4 +1,4 @@
-# Basic C SDL2 project
+# SDL Test
 
 This project is a basic C [SDL2][SDL] project that uses [CMake][] as a build system.
 
@@ -38,8 +38,8 @@ sudo apt install libsdl2-image-dev libsdl2-ttf-dev libsdl2-net-dev libsdl2-mixer
 
 ```sh
 # Clone this repo
-git clone https://gitlab.com/aminosbh/basic-c-sdl-project.git
-cd basic-c-sdl-project
+git clone https://gitlab.com/aminosbh/sdl-test.git
+cd sdl-test
 
 # Create a build folder
 mkdir build
@@ -50,7 +50,7 @@ cmake ..
 make
 
 # Run
-./basic-c-sdl-project
+./sdl-test
 ```
 
 ***Note:*** To use SDL2_image, SDL2_ttf, SDL2_net, SDL2_mixer or SDL2_gfx, you
