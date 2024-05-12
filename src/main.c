@@ -11,19 +11,11 @@ int SCREEN_WIDTH = 800;
 
 int SCREEN_HEIGHT = 600;
 
-bool init();
-
-bool localMedia();
-
-void close();
-
-int main();
-
-bool init() {
+bool init(void) {
   bool isSuccess = true;
 
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    printf("SDL could not initialize: %s\n", SDL_GetError);
+    printf("SDL could not initialize: %s\n", SDL_GetError());
     isSuccess = false;
   } else {
     sdlWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED,
@@ -32,7 +24,7 @@ bool init() {
   }
 
   if (sdlWindow == NULL) {
-    printf("SDL Window Could Not Be Created: %s\n", SDL_GetError);
+    printf("SDL Window Could Not Be Created: %s\n", SDL_GetError());
     isSuccess = false;
   } else {
     graphicsScreenSurface = SDL_GetWindowSurface(sdlWindow);
@@ -41,19 +33,19 @@ bool init() {
   return isSuccess;
 }
 
-bool localMedia() {
+bool localMedia(void) {
   bool isSuccess = true;
 
   helloWorldSurface = SDL_LoadBMP("");
 
   if (helloWorldSurface == NULL) {
-    printf("Error making hello world surface: %s\n", SDL_GetError);
+    printf("Error making hello world surface: %s\n", SDL_GetError());
   }
 
   return isSuccess;
 }
 
-void close() {
+void close(void) {
   SDL_FreeSurface(helloWorldSurface);
   helloWorldSurface = NULL;
 
@@ -66,7 +58,7 @@ void close() {
   SDL_Quit();
 }
 
-int main() {
+int main(void) {
   init();
   localMedia();
   close();

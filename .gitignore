@@ -1,2 +1,7 @@
 build
 CMakeLists.txt.*
+CMakeCache.txt
+CMakeFiles/**
+Makefile
+sdl-test
+cmake_install.cmake
