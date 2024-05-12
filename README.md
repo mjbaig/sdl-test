@@ -41,12 +41,8 @@ sudo apt install libsdl2-image-dev libsdl2-ttf-dev libsdl2-net-dev libsdl2-mixer
 git clone https://gitlab.com/aminosbh/sdl-test.git
 cd sdl-test
 
-# Create a build folder
-mkdir build
-cd build
-
 # Build
-cmake ..
+cmake .
 make
 
 # Run
