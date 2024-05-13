@@ -49,6 +49,15 @@ make
 ./sdl-test
 ```
 
+# Configure .clangd file for LSP
+create a `.clangd` file in the root and and this line to the file:
+
+CompileFlags:
+  Add: -I`<path to your project>`/include
+
+If there's a way to use relative paths in the clangd file, let me know. I don't get c build systems as of writing this.
+
+
 ***Note:*** To use SDL2_image, SDL2_ttf, SDL2_net, SDL2_mixer or SDL2_gfx, you
 should uncomment some instructions in the CMakeLists.txt file and re-execute
 the `make` command.

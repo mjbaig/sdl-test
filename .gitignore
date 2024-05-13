@@ -5,3 +5,4 @@ CMakeFiles/**
 Makefile
 sdl-test
 cmake_install.cmake
+.clangd
